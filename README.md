@@ -1,3 +1,19 @@
+HAN SSO startup:
+mvn package
+
+modify local tomcat:
+1.copy  /etc/keystore to you ${tomcat_home}/confg
+2. modify ${tomcat_home}/confg/server.xml add following:
+	 <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+               maxThreads="150" SSLEnabled="true">
+        <SSLHostConfig>
+            <Certificate certificateKeystoreFile="conf/keystore"
+                         type="RSA" />
+        </SSLHostConfig>
+    </Connector>
+3. use https://localhost:8443/ as login point.
+
+
 CAS Overlay Template
 ============================
 
