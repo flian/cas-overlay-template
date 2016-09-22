@@ -12,7 +12,10 @@ modify local tomcat:
         </SSLHostConfig>
     </Connector>
 3. use https://localhost:8443/ as login point.
+4. you can use casuser/Mellon login, or add some use in 
+src/main/resources/cas.properties line 290,accept.authn.users property
 
+read cas.properties for db user support..
 
 CAS Overlay Template
 ============================
