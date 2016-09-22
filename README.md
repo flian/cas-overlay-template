@@ -15,6 +15,7 @@ modify local tomcat:
 4. you can use casuser/Mellon login, or add some use in 
 src/main/resources/cas.properties line 290,accept.authn.users property
 
+next:
 read cas.properties for db user support..
 
 CAS Overlay Template
