@@ -26,7 +26,7 @@
     -->
     <util:map id="authenticationHandlersResolvers">
         <entry key-ref="proxyAuthenticationHandler" value-ref="proxyPrincipalResolver" />
-        <entry key-ref="primaryAuthenticationHandler" value-ref="primaryPrincipalResolver" />
+        <entry key-ref="primaryAuthenticationHandler" value-ref="primaryAuthenticationHandler" />
     </util:map>
 
     <util:list id="authenticationMetadataPopulators">
@@ -38,7 +38,7 @@
           p:backingMap-ref="attrRepoBackingMap" />
 
     <alias name="shiroAuthenticationHandler" alias="primaryAuthenticationHandler" />
-    <alias name="personDirectoryPrincipalResolver" alias="primaryPrincipalResolver" />
+
 
     <util:map id="attrRepoBackingMap">
         <entry key="uid" value="uid" />

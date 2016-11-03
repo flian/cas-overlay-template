@@ -70,3 +70,12 @@ CAS will be available at:
 
 ## External
 Deploy resultant `target/cas.war` to a Servlet container of choice.
+
+
+Authentication:
+JDBC:
+https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html
+
+shiro:
+https://apereo.github.io/cas/4.2.x/installation/Shiro-Authentication.html
+
