@@ -96,6 +96,18 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
+        <!-- use shiro -->
+        <dependency>
+            <groupId>org.jasig.cas</groupId>
+            <artifactId>cas-server-support-generic</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
+<!--   use jdbc
+        <dependency>
+            <groupId>org.jasig.cas</groupId>
+            <artifactId>cas-server-support-jdbc</artifactId>
+            <version>${cas.version}</version>
+        </dependency>-->
     </dependencies>
 
     <properties>
