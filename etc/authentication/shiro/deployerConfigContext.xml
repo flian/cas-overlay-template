@@ -15,18 +15,10 @@
        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <!--see document in https://apereo.github.io/cas/4.2.x/installation/Shiro-Authentication.html
-       first include:
-         <dependency>
-          <groupId>org.jasig.cas</groupId>
-          <artifactId>cas-server-support-generic</artifactId>
-          <version>${cas.version}</version>
-        </dependency>
-       then just following the document.
-    -->
+
     <util:map id="authenticationHandlersResolvers">
         <entry key-ref="proxyAuthenticationHandler" value-ref="proxyPrincipalResolver" />
-        <entry key-ref="primaryAuthenticationHandler" value-ref="primaryAuthenticationHandler" />
+        <entry key-ref="primaryAuthenticationHandler" value-ref="primaryPrincipalResolver" />
     </util:map>
 
     <util:list id="authenticationMetadataPopulators">
@@ -38,7 +30,8 @@
           p:backingMap-ref="attrRepoBackingMap" />
 
     <alias name="shiroAuthenticationHandler" alias="primaryAuthenticationHandler" />
-
+    <!--<alias name="acceptUsersAuthenticationHandler" alias="primaryAuthenticationHandler" />-->
+    <alias name="personDirectoryPrincipalResolver" alias="primaryPrincipalResolver" />
 
     <util:map id="attrRepoBackingMap">
         <entry key="uid" value="uid" />
@@ -59,7 +52,7 @@
     <alias name="jsonServiceRegistryDao" alias="serviceRegistryDao" />
 
     <alias name="defaultTicketRegistry" alias="ticketRegistry" />
-    
+
     <alias name="ticketGrantingTicketExpirationPolicy" alias="grantingTicketExpirationPolicy" />
     <alias name="multiTimeUseOrTimeoutExpirationPolicy" alias="serviceTicketExpirationPolicy" />
 
